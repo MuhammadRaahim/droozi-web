@@ -5,6 +5,10 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+};
+
 @theme {
   --breakpoint-*: initial;
   --breakpoint-xs: 450px;

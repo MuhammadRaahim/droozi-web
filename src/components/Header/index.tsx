@@ -160,10 +160,19 @@ const Header = () => {
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-xs px-8 py-3 text-base font-medium text-white transition duration-300 md:block md:px-9 lg:px-6 xl:px-9"
+                  href="#contact"
+                  className="
+                    hidden md:block       
+                    rounded-full
+                    bg-primary
+                    px-8 py-3
+                    text-base font-medium text-white
+                    shadow-btn
+                    hover:bg-primary/90 hover:shadow-btn-hover
+                    transition duration-300
+                  "
                 >
-                  Sign In
+                  Contact Us
                 </Link>
                 <div>
                   <ThemeToggler />

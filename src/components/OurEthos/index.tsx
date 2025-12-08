@@ -1,3 +1,5 @@
+"use client";
+
 import { FaLock, FaUsers, FaBolt, FaUserShield } from "react-icons/fa";
 
 const OurEthos = () => {
@@ -29,7 +31,7 @@ const OurEthos = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-dark">
+    <section id="ethos" className="py-20 bg-white dark:bg-[var(--color-black)]">
       <div className="container mx-auto px-4 text-center">
         {/* Title & Description */}
         <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">

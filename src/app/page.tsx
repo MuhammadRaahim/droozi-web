@@ -8,6 +8,7 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import OurEthos from "@/components/OurEthos";
 import Pricing from "@/components/Pricing";
+import Roadmap from "@/components/Roadmap";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
@@ -28,13 +29,14 @@ export default function Home() {
       <Hero />
       <OurEthos />
       <Features />
-      <Video />
+      {/* <Video />
       <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials />
+      <Testimonials /> */}
       <Pricing />
-      <Blog />
+      <Roadmap />
+      {/* <Blog /> */}
       <Contact />
     </>
   );
