@@ -16,7 +16,7 @@ const Features = () => {
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
             {/* LEFT — Feature Cards */}
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-5 max-w-[760px] lg:max-w-[820px]">
 
               {/* Card 1 */}
               <div className="rounded-xl bg-gray-50 dark:bg-gray-dark p-6 border border-gray-200 dark:border-white/10">
@@ -96,11 +96,11 @@ const Features = () => {
             {/* RIGHT — Image */}
             <div className="flex justify-center lg:justify-end">
               <Image
-                src="/images/features-phone.png"
+                src="/Features-phone.png"
                 alt="Droozi App"
-                width={320}          // reduced from 420
-                height={580}         // reduced proportionally
-                className="rounded-xl shadow-xl w-full max-w-[220px] md:max-w-[260px] lg:max-w-[300px]"
+                width={300}
+                height={540}
+                className="w-full max-w-[200px] md:max-w-[230px] lg:max-w-[260px]"
                 priority
               />
             </div>

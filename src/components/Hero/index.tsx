@@ -6,12 +6,12 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark"
       >
         <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           {/* Left Column - Content */}
-          <div className="w-full px-4 lg:w-8/12">
+          <div className="w-full px-4 lg:w-7/12">
             <div className="mx-auto max-w-[600px] lg:mx-0">
               <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-5xl">
                 Plan your future without sharing your present.
@@ -19,33 +19,54 @@ const Hero = () => {
               <p className="mb-8 text-base text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 Droozi lets you share where you’ll be—in advance and on your terms—so friends and colleagues can plan real-life meetups without ever tracking your live location.
               </p>
-              <div className="flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+              <div className="flex w-full flex-col space-y-3 sm:w-auto sm:flex-row sm:items-start sm:space-x-4 sm:space-y-0">
                 <Link
-                  href="https://play.google.com/store/apps/details?id=com.droozi&hl=en"
+                  href="https://apps.apple.com/ae/app/droozi/id6708242315"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-primary px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+                  className="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg sm:px-8 sm:py-4 sm:text-base"
                 >
-                  Download for IOS
+                  {/* Apple Icon */}
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M16.365 1.43c0 1.14-.417 2.075-1.25 2.805-.833.73-1.79 1.153-2.86 1.07-.14-1.1.39-2.07 1.14-2.83.75-.77 2.05-1.33 2.97-1.05zM20.16 17.34c-.56 1.3-.82 1.88-1.55 3-.98 1.5-2.36 3.36-4.07 3.38-1.52.02-1.92-.99-3.99-.99-2.07 0-2.51.97-3.99 1.01-1.71.03-3.02-1.69-4-3.18C.33 17.2-1.13 9.9 1.6 5.8c1.36-2.03 3.52-3.22 5.99-3.22 1.87 0 3.43 1.02 3.99 1.02.56 0 2.43-1.26 4.6-1.07.91.04 3.47.37 5.12 2.78-.13.08-3.06 1.78-3.03 5.31.03 4.22 3.7 5.62 3.75 5.64z" />
+                  </svg>
+                  Download for iOS
                 </Link>
+
                 <Link
-                  href="#features"
-                  className="rounded-full bg-black px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                  href="https://play.google.com/store/apps/details?id=com.droozi&hl=en"
+                  className="flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5 sm:px-8 sm:py-4 sm:text-base"
+                  target="_blank"
                 >
-                  Download for Windows
+                  {/* Android Icon */}
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M17.6 9.48l1.84-3.18a.4.4 0 00-.14-.55.4.4 0 00-.55.14l-1.87 3.23a7.06 7.06 0 00-9.76 0L5.25 5.89a.4.4 0 10-.69.41l1.84 3.18A6.9 6.9 0 004 14h16a6.9 6.9 0 00-2.4-4.52zM9 12.5a.75.75 0 11.001-1.501A.75.75 0 019 12.5zm6 0a.75.75 0 11.001-1.501A.75.75 0 0115 12.5z" />
+                  </svg>
+                  Download for Android
                 </Link>
+
               </div>
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="w-full px-4 lg:w-4/12">
+          <div className="w-full px-4 lg:w-5/12">
             <div className="relative mt-10 lg:mt-0">
               <Image
-                src="/images/hero-image.png" 
+                src="/hero-image.png" 
                 alt="Hero Image"
-                width={200}
-                height={300}
+                width={700}
+                height={750}
                 className="mx-auto lg:ml-auto"
               />
             </div>
