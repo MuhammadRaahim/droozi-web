@@ -96,7 +96,7 @@ const Features = () => {
             {/* RIGHT — Image */}
             <div className="flex justify-center lg:justify-end">
               <Image
-                src="/Features-phone.png"
+                src="/Features-phone.svg"
                 alt="Droozi App"
                 width={300}
                 height={540}
