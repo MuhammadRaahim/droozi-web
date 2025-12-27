@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="w-full px-4 lg:w-5/12">
             <div className="relative mt-10 lg:mt-0">
               <Image
-                src="/hero-image.svg" 
+                src="/hero-image1.png" 
                 alt="Hero Image"
                 width={700}
                 height={750}
