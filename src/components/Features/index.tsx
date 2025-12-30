@@ -4,8 +4,20 @@ import SectionTitle from "../Common/SectionTitle";
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-24">
-        <div className="container">
+      <section id="features" className="py-16 md:py-20 lg:py-24 relative">
+        {/* Large screen image (absolute on the right) */}
+        <div className="hidden lg:block absolute top-23 right-0 w-1/2 h-full z-0">
+          <Image
+            src="/1.png"
+            alt="Droozi App"
+            fill
+            className="object-contain w-full h-full"
+            priority
+          />
+        </div>
+
+        {/* Content Container */}
+        <div className="container relative z-10">
           <SectionTitle
             title="Meet IRL, not just online."
             paragraph="Droozi solves the real-world problems of coordinating plans without over-sharing."
@@ -13,11 +25,9 @@ const Features = () => {
           />
 
           {/* Split Section */}
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative">
             {/* LEFT — Feature Cards */}
-            <div className="flex flex-col space-y-5 max-w-[760px] lg:max-w-[820px]">
-
+            <div className="flex flex-col space-y-5 max-w-[760px] lg:max-w-[820px] mx-auto lg:mx-0">
               {/* Card 1 */}
               <div className="rounded-xl bg-gray-50 dark:bg-gray-dark p-6 border border-gray-200 dark:border-white/10">
                 <div className="flex items-start space-x-4">
@@ -29,7 +39,6 @@ const Features = () => {
                         d="M3.98 8.223a6.97 6.97 0 0110.713-3.707m2.454 2.454a6.969 6.969 0 01-3.707 10.713m2.54-6.18a2.25 2.25 0 11-3.182-3.182" />
                     </svg>
                   </span>
-
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       Missed Connections?
@@ -55,7 +64,6 @@ const Features = () => {
                         d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0V10.5M3.75 10.5h16.5M6 10.5v7.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 18v-7.5" />
                     </svg>
                   </span>
-
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       Over-sharing Your Location?
@@ -79,7 +87,6 @@ const Features = () => {
                         d="M7.5 9.75h9m-9 4.5h6m-3 6.75a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5z" />
                     </svg>
                   </span>
-
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       Scattered Invites?
@@ -92,18 +99,9 @@ const Features = () => {
                 </div>
               </div>
             </div>
-
-            {/* RIGHT — Image */}
-            <div className="flex justify-center lg:justify-end">
-              <Image
-                src="/Features-phone1.png"
-                alt="Droozi App"
-                width={300}
-                height={540}
-                className="w-full max-w-[200px] md:max-w-[230px] lg:max-w-[260px]"
-                priority
-              />
-            </div>
+            
+            {/* Image completely hidden on small screens */}
+            {/* No extra code needed because lg:block already hides it */}
           </div>
         </div>
       </section>
