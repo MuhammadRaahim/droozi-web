@@ -7,6 +7,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
-  // ✅ routes jahan header/footer nahi chahiye
+  // route without header/Footer
   const noLayoutRoutes = ["/privacy-policy"];
 
   const hideLayout = noLayoutRoutes.includes(pathname);
@@ -33,6 +35,7 @@ export default function RootLayout({
             {!hideLayout && <Footer />}
           </div>
           {!hideLayout && <ScrollToTop />}
+          <Analytics />
         </Providers>
       </body>
     </html>
