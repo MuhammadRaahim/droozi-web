@@ -11,7 +11,7 @@ export default function IframeRouteSync() {
       // Post the full pathname to the parent
       window.parent.postMessage(
         { type: "navigate", path: pathname },
-        "https://droozi.com" // match exactly parent script origin
+        "https://droozi-web.vercel.app" // match exactly parent script origin
       );
     }
   }, [pathname]);
