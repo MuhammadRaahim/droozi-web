@@ -23,12 +23,15 @@ export default function RootLayout({
   const noLayoutRoutes = ["/privacy-policy"];
   const hideLayout = noLayoutRoutes.includes(pathname);
 
+  // Wait for client path to avoid hydration issues
+  if (!pathname) return null;
+
   return (
     <html suppressHydrationWarning lang="en">
       <head />
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
-          {/* iframe route sync */}
+          {/* Send path updates to parent */}
           <IframeRouteSync />
 
           <div className="isolate">

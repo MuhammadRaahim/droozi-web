@@ -8,10 +8,10 @@ export default function IframeRouteSync() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.parent !== window) {
-      // send initial and subsequent pathnames
+      // Post the full pathname to the parent
       window.parent.postMessage(
         { type: "navigate", path: pathname },
-        "https://droozi.com" 
+        "https://droozi.com" // match exactly parent script origin
       );
     }
   }, [pathname]);
