@@ -23,8 +23,8 @@ export default function RootLayout({
   const noLayoutRoutes = ["/privacy-policy"];
   const hideLayout = noLayoutRoutes.includes(pathname);
 
-  // Wait for client path to avoid hydration issues
-  if (!pathname) return null;
+  // // Wait for client path to avoid hydration issues
+  // if (!pathname) return null;
 
   return (
     <html suppressHydrationWarning lang="en">
