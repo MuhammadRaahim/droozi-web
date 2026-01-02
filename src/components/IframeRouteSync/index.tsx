@@ -10,7 +10,7 @@ export default function IframeRouteSync() {
     if (typeof window !== "undefined" && window.parent !== window) {
       window.parent.postMessage(
         {
-          type: "ROUTE_CHANGE",
+          type: "navigate",
           path: pathname,
         },
         "*"
