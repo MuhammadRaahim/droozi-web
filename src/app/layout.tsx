@@ -4,11 +4,11 @@ import { usePathname } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import IframeRouteSync from "@/components/IframeRouteSync";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +19,8 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
-  // route without header/Footer
+  // routes without Header / Footer
   const noLayoutRoutes = ["/privacy-policy"];
-
   const hideLayout = noLayoutRoutes.includes(pathname);
 
   return (
@@ -29,11 +28,15 @@ export default function RootLayout({
       <head />
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
+          {/* iframe route sync */}
+          <IframeRouteSync />
+
           <div className="isolate">
             {!hideLayout && <Header />}
             {children}
             {!hideLayout && <Footer />}
           </div>
+
           {!hideLayout && <ScrollToTop />}
           <Analytics />
         </Providers>

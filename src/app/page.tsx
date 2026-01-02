@@ -1,7 +1,3 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
@@ -9,18 +5,15 @@ import Hero from "@/components/Hero";
 import OurEthos from "@/components/OurEthos";
 import Pricing from "@/components/Pricing";
 import Roadmap from "@/components/Roadmap";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Droozi – Modern Web Solutions",
   description: "Droozi",
   icons: {
-    icon: '/favicon.svg', // <-- Add this
+    icon: '/favicon.svg', 
   },
 };
-  // other metadata
 
 export default function Home() {
   return (
@@ -29,14 +22,8 @@ export default function Home() {
       <Hero />
       <OurEthos />
       <Features />
-      {/* <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials /> */}
       <Pricing />
       <Roadmap />
-      {/* <Blog /> */}
       <Contact />
     </>
   );

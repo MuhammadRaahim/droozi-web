@@ -1,3 +1,5 @@
+"use client";
+
 // components/Roadmap.jsx
 
 const Roadmap = () => {
