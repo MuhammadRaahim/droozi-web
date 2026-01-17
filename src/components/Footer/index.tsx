@@ -3,6 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    try {
+      // Parent origin dynamically detect karo
+      const parentOrigin = window.top.location.origin;
+      // Parent window ko redirect karo backend route pe
+      window.top.location.assign(`${parentOrigin}/privacy-policy`);
+    } catch (error) {
+      console.error("Cannot redirect parent window:", error);
+    }
+  };
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -159,13 +170,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      onClick={(e) => {
-                        e.preventDefault(); // Default link ko block karo
-                        // Parent window ka origin detect karo
-                        const parentOrigin = window.top.location.origin;
-                        // Parent window ko backend route pe le jao
-                        window.top.location.href = `${parentOrigin}/privacy-policy`;
-                      }}
+                      onClick={handleClick}
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
