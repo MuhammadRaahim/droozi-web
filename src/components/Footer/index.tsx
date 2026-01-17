@@ -160,15 +160,17 @@ const Footer = () => {
                     <a
                       href="#"
                       onClick={(e) => {
-                        e.preventDefault();
-                        // Parent window ko backend route pe redirect karo
-                        const backendOrigin = window.top.location.origin; // jo current parent origin hai
-                        window.top.location.href = `${backendOrigin}/privacy-policy`;
+                        e.preventDefault(); // Default link ko block karo
+                        // Parent window ka origin detect karo
+                        const parentOrigin = window.top.location.origin;
+                        // Parent window ko backend route pe le jao
+                        window.top.location.href = `${parentOrigin}/privacy-policy`;
                       }}
-                      className="mb-4 inline-block text-base text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
                     </a>
+
                   </li>
                   <li>
                     <Link
