@@ -1,6 +1,17 @@
 "use client";
+import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
+
+   useEffect(() => {
+    // ✅ If page is opened inside iframe, break out to parent URL
+    if (typeof window !== "undefined") {
+      if (window.self !== window.top) {
+        window.top.location.href = "http://localhost:5000/privacy-policy";
+      }
+    }
+  }, []);
+
   return (
     <div className="bg-white text-black font-sans text-base leading-7 px-6 py-8 md:px-20">
       {/* Title */}
