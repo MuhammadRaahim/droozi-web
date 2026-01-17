@@ -4,16 +4,10 @@ import { useEffect } from "react";
 const PrivacyPolicy = () => {
 
    useEffect(() => {
+    // ✅ If page is opened inside iframe, break out to parent URL
     if (typeof window !== "undefined") {
-      // If inside iframe, redirect parent to same path on parent domain
       if (window.self !== window.top) {
-        const parentUrl =
-          window.location.protocol +
-          "//" +
-          window.location.host +
-          "/privacy-policy";
-
-        window.top.location.href = parentUrl;
+        window.top.location.href = "http://localhost:5000/privacy-policy";
       }
     }
   }, []);
