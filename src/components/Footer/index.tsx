@@ -159,8 +159,11 @@ const Footer = () => {
                   <li>
                     <a
                       href="/privacy-policy"
-                      target="_top"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      onClick={(e) => {
+                        e.preventDefault(); // Default link ko block karo
+                        window.top.location.href = "/privacy-policy"; // Parent window ko navigate karo
+                      }}
+                      className="mb-4 inline-block text-base text-body-color hover:text-primary"
                     >
                       Privacy Policy
                     </a>
