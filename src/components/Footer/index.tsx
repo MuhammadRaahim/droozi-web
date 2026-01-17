@@ -157,12 +157,13 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/privacy-policy"
+                      target="_top"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
-                    </Link>
+                    </a>
                   </li>
                   <li>
                     <Link

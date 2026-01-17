@@ -3,14 +3,24 @@ import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
 
-   useEffect(() => {
-    // ✅ If page is opened inside iframe, break out to parent URL
-    if (typeof window !== "undefined") {
-      if (window.self !== window.top) {
-        window.top.location.href = "http://localhost:5000/privacy-policy";
-      }
-    }
-  }, []);
+//   useEffect(() => {
+//   if (typeof window === "undefined") return;
+
+//   // If inside iframe
+//   if (window.self !== window.top) {
+//     const correctUrl =
+//       window.location.protocol +
+//       "//" +
+//       window.location.host +
+//       "/privacy-policy";
+
+//     // 🔒 Prevent unnecessary reload / loop
+//     if (window.top.location.href !== correctUrl) {
+//       window.top.location.replace(correctUrl);
+//     }
+//   }
+// }, []);
+
 
   return (
     <div className="bg-white text-black font-sans text-base leading-7 px-6 py-8 md:px-20">
