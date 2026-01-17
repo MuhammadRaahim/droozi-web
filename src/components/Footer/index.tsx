@@ -159,6 +159,9 @@ const Footer = () => {
                   <li>
                     <a
                       href="/privacy-policy"
+                      onClick={() => {
+                        window.location.href = "/privacy-policy";
+                      }}
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
