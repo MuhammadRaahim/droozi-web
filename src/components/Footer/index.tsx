@@ -158,10 +158,12 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/privacy-policy"
+                      href="#"
                       onClick={(e) => {
-                        e.preventDefault(); // Default link ko block karo
-                        window.top.location.href = "/privacy-policy"; // Parent window ko navigate karo
+                        e.preventDefault();
+                        // Parent window ko backend route pe redirect karo
+                        const backendOrigin = window.top.location.origin; // jo current parent origin hai
+                        window.top.location.href = `${backendOrigin}/privacy-policy`;
                       }}
                       className="mb-4 inline-block text-base text-body-color hover:text-primary"
                     >
