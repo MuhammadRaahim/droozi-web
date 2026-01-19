@@ -31,7 +31,7 @@ const Footer = () => {
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="https://www.facebook.com/share/18AZqzFFyB/?mibextid=wwXIfr"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
-                  <a
+                  {/* <a
                     href="/"
                     aria-label="social-link"
                     target="_blank"
@@ -71,25 +71,25 @@ const Footer = () => {
                         fill="currentColor"
                       />
                     </svg>
-                  </a>
+                  </a> */}
                   <a
-                    href="/"
-                    aria-label="social-link"
+                    href="https://www.instagram.com/droozi_app?igsh=MTBoanA2cXVlajJnOQ=="
+                    aria-label="instagram"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="18"
-                      height="14"
-                      viewBox="0 0 18 14"
+                      height="18"
+                      viewBox="0 0 24 24"
                       className="fill-current"
                     >
-                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
+                      <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.75-2.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/>
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/company/droozi/posts/?feedView=all"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -8,7 +8,7 @@ import Roadmap from "@/components/Roadmap";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Droozi – Modern Web Solutions",
+  title: "Droozi",
   description: "Droozi",
   icons: {
     icon: '/favicon.svg', 
