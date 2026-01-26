@@ -1,0 +1,13 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "F6Z9567792.com.instance.entlix.mms.droozi",
+                "paths": [
+                    "/event/*"
+                ]
+            }
+        ]
+    }
+}
